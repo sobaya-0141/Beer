@@ -1,3 +1,4 @@
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -7,6 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
+import io.kamel.image.KamelImage
+import io.kamel.image.lazyPainterResource
 import repository.network.service.entity.BeersItem
 import usecase.GetBeersUseCase
 
@@ -25,7 +28,13 @@ fun App(getBeersUseCase: GetBeersUseCase) {
                     items = it,
                     key = { it.id }
                 ) {
-                    Text(it.name)
+                    Column {
+                        Text(it.name)
+                        KamelImage(
+                            resource = lazyPainterResource(it.image_url),
+                            contentDescription = null
+                        )
+                    }
                 }
             }
         }

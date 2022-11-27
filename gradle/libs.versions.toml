@@ -39,6 +39,7 @@ kswift = "0.6.0"
 ksp = "1.7.10-1.0.6"
 multiplatformPaging = "0.5.0"
 animatableCompose = "1.0.5"
+kamel = "0.4.0"
 
 [libraries]
 kotlinxCoroutinesAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref ="coroutine" }
@@ -112,6 +113,7 @@ ktorLogging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
 kswift = { module = "dev.icerock.moko:kswift-runtime", version.ref = "kswift" }
 multiplatformPaging = { module = "io.github.kuuuurt:multiplatform-paging", version.ref = "multiplatformPaging" }
 animatableCompose = { module = "com.github.commandiron:AnimatableCompose", version.ref = "animatableCompose" }
+kamel = { module = "com.alialbaali.kamel:kamel-image", version.ref = "kamel" }
 
 [bundles]
 paging = ["paging", "pagingCompose"]

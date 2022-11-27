@@ -4,6 +4,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class MashTemp(
-    val duration: Int,
+    val duration: String?,
     val temp: Temp
 )

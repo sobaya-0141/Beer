@@ -9,5 +9,5 @@ import repository.network.service.entity.BeersItem
 //}
 
 class GetBeersUseCase(private val beerRepository: BeerRepository) {
-    suspend operator fun invoke(coroutineScope: CoroutineScope): List<BeersItem> = beerRepository.getBeers(1, 1)
+    suspend operator fun invoke(coroutineScope: CoroutineScope): List<BeersItem> = beerRepository.getBeers(1, 50)
 }
