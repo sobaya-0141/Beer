@@ -6,16 +6,6 @@ plugins {
     kotlin("plugin.serialization") version "1.7.21"
 }
 
-configurations {
-    "implementation" {
-        exclude(group = "androidx.compose.animation")
-        exclude(group = "androidx.compose.foundation")
-        exclude(group = "androidx.compose.material")
-        exclude(group = "androidx.compose.runtime")
-        exclude(group = "androidx.compose.ui")
-    }
-}
-
 kotlin {
     android()
     jvm("desktop")
@@ -39,6 +29,7 @@ kotlin {
                 implementation(libs.kamel)
 
                 implementation(libs.kotlinxCoroutinesAndroid)
+                implementation(libs.bundles.compose)
                 implementation(libs.bundles.lifecycleCompose)
                 implementation(libs.bundles.accompanist.pager)
                 implementation(libs.bundles.compose.navigastion)
