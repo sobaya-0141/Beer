@@ -39,9 +39,7 @@ kotlin {
                 implementation(libs.kamel)
 
                 implementation(libs.kotlinxCoroutinesAndroid)
-                implementation(libs.bundles.compose)
                 implementation(libs.bundles.lifecycleCompose)
-                implementation(libs.coil.compose)
                 implementation(libs.bundles.accompanist.pager)
                 implementation(libs.bundles.compose.navigastion)
             }
